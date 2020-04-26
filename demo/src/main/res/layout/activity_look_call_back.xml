@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212555"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="420dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_callback_look"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="已反馈  35622155666321556666"
+            android:textColor="@color/color_0dcfff"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_jjdh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="接警单编号：35010020190704102392"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_bjsj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="报警时间：2019-07-04  15:09:08"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_bjrname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="报警人姓名：张懂事"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报警电话：匿名  "
+                android:textColor="#ffffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#09CEFF"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_phone" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_bjdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="警情地点：福建省公安厅旁"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_jqlb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="警情类别：求助-其他求助"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_cjdw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="出警单位：福州市公安局华大派出所"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_bjnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="报警内容：琐事求助"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintLeft_toRightOf="@id/ll_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_left">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_callback_look"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="19dp"
+                android:text="反馈信息"
+                android:textColor="#ff0dcfff"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/img_one"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/bg_round_green"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="派发"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/img_one"
+                app:layout_constraintStart_toStartOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/img_one" />
+
+            <TextView
+                android:id="@+id/tv_pfsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="10dp"
+                android:text="派发时间：2019-07-04 16:01:20"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/img_one"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toTopOf="@id/img_one" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="33dp"
+                android:background="#393D76"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pfsj"
+                app:layout_constraintTop_toBottomOf="@id/tv_pfsj" />
+
+            <TextView
+                android:id="@+id/img_two"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="29dp"
+                android:background="@mipmap/bg_round_green"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/img_one" />
+
+            <TextView
+                android:id="@+id/tv_qsjy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="签收警员：王丽达"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toTopOf="@id/img_two" />
+
+            <TextView
+                android:id="@+id/tv_qssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:text="签收时间：2019-07-04 16:01:20"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/tv_qsjy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签收"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/img_one"
+                app:layout_constraintStart_toStartOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/img_two" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="33dp"
+                android:background="#393D76"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_qssj"
+                app:layout_constraintTop_toBottomOf="@id/tv_qssj" />
+
+            <TextView
+                android:id="@+id/img_three"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="29dp"
+                android:background="@mipmap/bg_round_green"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/img_two" />
+
+            <TextView
+                android:id="@+id/tv_dcjy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="到场警员：王丽达"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toTopOf="@id/img_three" />
+
+            <TextView
+                android:id="@+id/tv_dcsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:text="到场时间：2019-07-04 16:01:20"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/tv_dcjy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签收"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/img_one"
+                app:layout_constraintStart_toStartOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/img_three" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="33dp"
+                android:background="#393D76"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_dcsj"
+                app:layout_constraintTop_toBottomOf="@id/tv_dcsj" />
+
+
+            <TextView
+                android:id="@+id/img_four"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="29dp"
+                android:background="@mipmap/bg_round_green"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/img_three" />
+
+            <TextView
+                android:id="@+id/tv_jsjy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="结束警员：王丽达"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toTopOf="@id/img_four" />
+
+            <TextView
+                android:id="@+id/tv_jssj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:text="结束时间：2019-07-04 16:01:20"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/tv_jsjy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签收"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/img_one"
+                app:layout_constraintStart_toStartOf="@id/img_one"
+                app:layout_constraintTop_toBottomOf="@id/img_four" />
+
+            <View
+                android:id="@+id/line_4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="33dp"
+                android:background="#393D76"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_dcsj"
+                app:layout_constraintTop_toBottomOf="@id/tv_jssj" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="102dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/color_141538"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:src="@mipmap/ic_callback_back"
+        android:id="@+id/img_back"
+        android:layout_width="113dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="37dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

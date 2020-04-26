@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_all"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/baiduMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="94.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/bg_up"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bt_cj"
+            android:paddingLeft="16dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/img_cj"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/ic_chujing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_chujing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="处警"
+                android:textColor="@color/color_55E6FC"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bt_kanban"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_kanban"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/ic_qinwukanban"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_kanban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="警务看板"
+                android:textColor="@color/color_55E6FC"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bt_map"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_map"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/ic_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="勤务地图"
+                android:textColor="@color/color_55E6FC"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bt_warn"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="22.5dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_warn"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/ic_warn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="勤务预警"
+                android:textColor="@color/color_55E6FC"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="36dp"
+        android:layout_height="33dp"
+        android:background="@mipmap/ic_right_double"
+        app:layout_constraintBottom_toBottomOf="@id/ll"
+        app:layout_constraintLeft_toRightOf="@id/ll"
+        app:layout_constraintTop_toTopOf="@id/ll" />
+    <View
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/bg_home_right"
+        android:layout_width="469dp"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/fl_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll" />
+    <TextView
+
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textColor="#001F56"
+        android:id="@+id/tv_switch"
+        android:text="打开夜间模式"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_callback"
+        app:layout_constraintBottom_toTopOf="@id/view_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tv_jqid"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="警情编号：245879564123654789"
+                android:textColor="#ff0dcfff"
+                android:textSize="17sp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="113dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jqid"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="发生时间"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_data"
+                app:layout_constraintRight_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toTopOf="@id/tv_data"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="9dp"
+                android:src="@mipmap/ic_date"
+                app:layout_constraintBottom_toBottomOf="@id/tv_data"
+                app:layout_constraintRight_toRightOf="@id/tv_data"
+                app:layout_constraintTop_toTopOf="@id/tv_data" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_data"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="11dp"
+                android:src="@mipmap/ic_down"
+                app:layout_constraintBottom_toBottomOf="@id/tv_type"
+                app:layout_constraintRight_toRightOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/tv_type" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="警情类别"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_type"
+                app:layout_constraintRight_toLeftOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/tv_type"
+                tools:ignore="MissingConstraints" />
+
+
+            <EditText
+                android:id="@+id/tv_name"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="31dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/tv_data"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="报警人"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name"
+                app:layout_constraintRight_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toTopOf="@id/tv_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_form"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/tv_name"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="11dp"
+                android:src="@mipmap/ic_down"
+                app:layout_constraintBottom_toBottomOf="@id/tv_form"
+                app:layout_constraintRight_toRightOf="@id/tv_form"
+                app:layout_constraintTop_toTopOf="@id/tv_form" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="警情类型"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_form"
+                app:layout_constraintRight_toLeftOf="@id/tv_form"
+                app:layout_constraintTop_toTopOf="@id/tv_form"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/tv_id"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="31dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="身份证号"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_id"
+                app:layout_constraintRight_toLeftOf="@id/tv_id"
+                app:layout_constraintTop_toTopOf="@id/tv_id"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/tv_form_detail"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/tv_id"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="9dp"
+                android:layout_marginRight="11dp"
+                android:src="@mipmap/ic_down"
+                app:layout_constraintBottom_toBottomOf="@id/tv_form_detail"
+                app:layout_constraintRight_toRightOf="@id/tv_form_detail"
+                app:layout_constraintTop_toTopOf="@id/tv_form_detail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="警情细类"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_form_detail"
+                app:layout_constraintRight_toLeftOf="@id/tv_form_detail"
+                app:layout_constraintTop_toTopOf="@id/tv_form_detail"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/tv_phone"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="31dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/tv_id"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="报警电话"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_phone"
+                app:layout_constraintRight_toLeftOf="@id/tv_phone"
+                app:layout_constraintTop_toTopOf="@id/tv_phone"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/tv_address"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/tv_phone"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="发生地点"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_address"
+                app:layout_constraintRight_toLeftOf="@id/tv_address"
+                app:layout_constraintTop_toTopOf="@id/tv_address"
+                tools:ignore="MissingConstraints" />
+
+
+            <EditText
+                android:text="1"
+                android:id="@+id/et_car"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="31dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="出动车船数"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/et_car"
+                app:layout_constraintRight_toLeftOf="@id/et_car"
+                app:layout_constraintTop_toTopOf="@id/et_car"
+                tools:ignore="MissingConstraints" />
+
+
+            <EditText
+                android:id="@+id/et_power"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:background="@drawable/conner_stoken_no"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/tv_type"
+                app:layout_constraintTop_toTopOf="@id/et_car"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:text="出动警力"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/et_power"
+                app:layout_constraintRight_toLeftOf="@id/et_power"
+                app:layout_constraintTop_toTopOf="@id/et_power"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:paddingRight="11dp"
+                android:text="反馈内容"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/et_car"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/et_callback"
+                android:layout_width="0dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/conner_stoken_no"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_data"
+                app:layout_constraintRight_toLeftOf="@id/img_mike"
+                app:layout_constraintTop_toBottomOf="@id/et_car" />
+
+            <ImageView
+                android:id="@+id/img_mike"
+                android:layout_width="66dp"
+                android:layout_height="77dp"
+                android:background="@drawable/bg_mike"
+                android:padding="19dp"
+                android:src="@mipmap/ic_mike"
+                app:layout_constraintRight_toRightOf="@id/tv_address"
+                app:layout_constraintTop_toTopOf="@id/et_callback" />
+
+            <TextView
+                android:id="@+id/tv_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="常用短语"
+                android:textColor="#ffdfdfdf"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/et_callback" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@+id/tv_word" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingRight="11dp"
+                android:text="现场照片"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toLeftOf="@id/recycler_site"
+                app:layout_constraintTop_toTopOf="@id/img_site" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_site"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toTopOf="@id/img_site" />
+
+            <ImageView
+                android:id="@+id/img_site"
+                android:layout_width="95dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="107dp"
+                android:background="@drawable/conner_stoken_no"
+                android:paddingLeft="28dp"
+                android:paddingTop="35dp"
+                android:paddingRight="28dp"
+                android:paddingBottom="35dp"
+                android:src="@mipmap/ic_join_dialing_norm"
+                app:layout_constraintLeft_toRightOf="@id/recycler_site"
+                app:layout_constraintTop_toBottomOf="@id/et_callback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingRight="11dp"
+                android:text="嫌疑人"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toLeftOf="@id/recycler_person"
+                app:layout_constraintTop_toTopOf="@id/img_person" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_person"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/img_site" />
+
+            <ImageView
+                android:id="@+id/img_person"
+                android:layout_width="95dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/conner_stoken_no"
+                android:paddingLeft="28dp"
+                android:paddingTop="35dp"
+                android:paddingRight="28dp"
+                android:paddingBottom="35dp"
+                android:src="@mipmap/ic_join_dialing_norm"
+                app:layout_constraintLeft_toRightOf="@id/recycler_person"
+                app:layout_constraintTop_toBottomOf="@id/img_site" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingRight="11dp"
+                android:text="其他照片"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toLeftOf="@id/recycler_other"
+                app:layout_constraintTop_toTopOf="@id/img_other" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_other"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintLeft_toLeftOf="@id/tv_data"
+                app:layout_constraintTop_toBottomOf="@id/img_person" />
+
+
+            <ImageView
+                android:id="@+id/img_other"
+                android:layout_width="95dp"
+                android:layout_height="110dp"
+                android:background="@drawable/conner_stoken_no"
+                android:paddingLeft="28dp"
+                android:paddingTop="35dp"
+                android:paddingRight="28dp"
+                android:paddingBottom="35dp"
+                android:src="@mipmap/ic_join_dialing_norm"
+                app:layout_constraintLeft_toRightOf="@id/recycler_other"
+                app:layout_constraintTop_toTopOf="@id/recycler_other" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                app:layout_constraintTop_toBottomOf="@id/img_other" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/color_141538"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/bt_ok"
+        android:layout_width="113dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="22dp"
+        android:src="@mipmap/ic_callback_ok"
+        app:layout_constraintBottom_toBottomOf="@id/bt_no"
+        app:layout_constraintRight_toLeftOf="@id/bt_no"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bt_no"
+        android:layout_width="113dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/ic_callback_no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

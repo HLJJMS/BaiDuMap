@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/bg_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_month"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/calendarView"
+        app:layout_constraintStart_toStartOf="@id/calendarView"
+        app:layout_constraintTop_toTopOf="@id/rec" />
+
+    <ImageView
+        android:id="@+id/img_left"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        android:padding="14dp"
+        android:src="@mipmap/ic_left"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month"
+        app:layout_constraintStart_toStartOf="@id/tv_month"
+        app:layout_constraintTop_toTopOf="@id/tv_month" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        android:padding="14dp"
+        android:src="@mipmap/ic_right"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month"
+        app:layout_constraintEnd_toEndOf="@id/tv_month"
+        app:layout_constraintTop_toTopOf="@id/tv_month" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/color_4F5A7A"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month"
+        app:layout_constraintStart_toEndOf="@id/img_left"
+        app:layout_constraintTop_toTopOf="@id/tv_month" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/color_4F5A7A"
+        app:layout_constraintBottom_toBottomOf="@id/tv_month"
+        app:layout_constraintEnd_toStartOf="@id/img_right"
+        app:layout_constraintTop_toTopOf="@id/tv_month" />
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/rec"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_8013326A"
+        app:month_view="cn.net.hylink.policingcase.app.utils.colorful.ColorfulMonthView"
+        app:calendar_padding="10dp"
+        app:current_month_lunar_text_color="@color/white"
+        app:current_month_text_color="@color/white"
+        app:layout_constraintStart_toEndOf="@id/rec"
+        app:layout_constraintTop_toBottomOf="@id/tv_month"
+        app:min_year="2004"
+        app:week_background="#0013326A"
+        app:week_text_color="@color/white"
+        app:week_text_size="11sp"
+        app:week_view_scrollable="true" />
+</androidx.constraintlayout.widget.ConstraintLayout>
